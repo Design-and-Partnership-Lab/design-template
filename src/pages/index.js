@@ -8,77 +8,329 @@ const inter = Inter({ subsets: ["latin"] });
 //This is the component for the entire page.
 export default function Home({ isLoading, children, setLoading }) {
   return (
-    <div className="grid h-[100vh] w-[100vw] grid-cols-[1fr] grid-rows-[30px_1fr_30px]">
-      <div className="grid h-[100vh] w-[100vw] grid-cols-[1fr_9fr] overflow-hidden">
-        <div className="bg-edsightnavy-300 pt-6">
-          <Sidebar setLoading={setLoading} />
+    <div className="flex w-[100vw] h-[100vh]" bg-edsightnavy>
+      <div className="flex justify-center w-[50px] h-[100vh] bg-edsightnavy-300">
+        <div className="flex flex-col h-[25em] justify-around p-4">
+          <button>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="icon icon-tabler icon-tabler-home-2 stroke-edsightyellow-400 hover:stroke-edsightyellow-400"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              stroke-width="2"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+              <path d="M5 12l-2 0l9 -9l9 9l-2 0"></path>
+              <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7"></path>
+              <path d="M10 12h4v4h-4z"></path>
+            </svg>
+          </button>
+          <button>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="icon icon-tabler icon-tabler-users stroke-edsightlightgray-100 hover:stroke-edsightyellow-400"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              stroke-width="2"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+              <path d="M9 7m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0"></path>
+              <path d="M3 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2"></path>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+              <path d="M21 21v-2a4 4 0 0 0 -3 -3.85"></path>
+            </svg>
+          </button>
+          <button>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="icon icon-tabler icon-tabler-users stroke-edsightlightgray-100 hover:stroke-edsightyellow-400"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              stroke-width="2"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+              <path d="M9 7m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0"></path>
+              <path d="M3 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2"></path>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+              <path d="M21 21v-2a4 4 0 0 0 -3 -3.85"></path>
+            </svg>
+          </button>
+          <button>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="icon icon-tabler icon-tabler-users stroke-edsightlightgray-100 hover:stroke-edsightyellow-400"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              stroke-width="2"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+              <path d="M9 7m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0"></path>
+              <path d="M3 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2"></path>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+              <path d="M21 21v-2a4 4 0 0 0 -3 -3.85"></path>
+            </svg>
+          </button>
+          <button>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="icon icon-tabler icon-tabler-circle-plus stroke-edsightlightgray-100 hover:stroke-edsightyellow-400"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              stroke-width="2"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+              <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path>
+              <path d="M9 12l6 0"></path>
+              <path d="M12 9l0 6"></path>
+            </svg>
+          </button>
         </div>
-        <div className="p-5 pt-0 overflow-y-auto">
-          <div className="flex flex-col space-y-4 m-16 text-3xl">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              Placerat duis ultricies lacus sed turpis tincidunt id aliquet
-              risus. Consequat id porta nibh venenatis cras sed felis eget
-              velit. Ipsum faucibus vitae aliquet nec ullamcorper sit amet. At
-              augue eget arcu dictum. Viverra orci sagittis eu volutpat odio
-              facilisis mauris sit. Parturient montes nascetur ridiculus mus
-              mauris vitae ultricies leo integer. Nec sagittis aliquam malesuada
-              bibendum arcu. Nibh nisl condimentum id venenatis a. Feugiat in
-              fermentum posuere urna nec tincidunt. Mi in nulla posuere
-              sollicitudin aliquam ultrices sagittis. In tellus integer feugiat
-              scelerisque varius morbi enim nunc. Ullamcorper a lacus vestibulum
-              sed arcu non odio.{" "}
-            </p>
-            <p>
-              Volutpat consequat mauris nunc congue nisi vitae suscipit. Sociis
-              natoque penatibus et magnis dis parturient montes. Lacus sed
-              turpis tincidunt id aliquet. Egestas sed tempus urna et. Purus in
-              massa tempor nec feugiat nisl pretium fusce. Mauris sit amet massa
-              vitae tortor condimentum lacinia. Pulvinar sapien et ligula
-              ullamcorper malesuada proin libero. Dolor sit amet consectetur
-              adipiscing. Non diam phasellus vestibulum lorem sed risus
-              ultricies tristique. Sagittis vitae et leo duis ut diam. Orci
-              nulla pellentesque dignissim enim sit amet. Aliquet nec
-              ullamcorper sit amet risus nullam eget felis eget. Faucibus nisl
-              tincidunt eget nullam. Elit pellentesque habitant morbi tristique.
-              Feugiat in ante metus dictum at tempor. Tincidunt dui ut ornare
-              lectus sit. Quis blandit turpis cursus in. Varius duis at
-              consectetur lorem donec. Mi tempus imperdiet nulla malesuada.
-            </p>
-            <p>
-              Bibendum neque egestas congue quisque egestas. Magnis dis
-              parturient montes nascetur. Purus gravida quis blandit turpis
-              cursus in hac habitasse. Non sodales neque sodales ut etiam sit
-              amet. Quisque non tellus orci ac auctor augue. Nascetur ridiculus
-              mus mauris vitae ultricies. Enim nulla aliquet porttitor lacus.
-              Dictum non consectetur a erat nam at lectus urna duis. Leo vel
-              fringilla est ullamcorper eget nulla. Et malesuada fames ac turpis
-              egestas. Ut sem viverra aliquet eget sit amet tellus cras
-              adipiscing. Pharetra convallis posuere morbi leo urna molestie.
-              Aliquam faucibus purus in massa tempor nec feugiat nisl pretium.
-              Tempor orci dapibus ultrices in iaculis nunc sed augue lacus.
-              Venenatis urna cursus eget nunc scelerisque viverra mauris in
-              aliquam. Turpis in eu mi bibendum neque. Dignissim convallis
-              aenean et tortor at risus viverra adipiscing. Condimentum id
-              venenatis a condimentum vitae sapien pellentesque habitant morbi.
-              Pretium aenean pharetra magna ac placerat. Sed enim ut sem
-              viverra.
-            </p>
-            <p>
-              Pulvinar pellentesque habitant morbi tristique senectus et netus
-              et malesuada. Donec pretium vulputate sapien nec sagittis aliquam.
-              Facilisi morbi tempus iaculis urna id volutpat lacus. Integer
-              malesuada nunc vel risus commodo viverra maecenas. Sapien faucibus
-              et molestie ac feugiat sed. Et malesuada fames ac turpis egestas
-              sed tempus. Sed lectus vestibulum mattis ullamcorper velit. Arcu
-              bibendum at varius vel pharetra vel. Justo eget magna fermentum
-              iaculis. Pulvinar neque laoreet suspendisse interdum consectetur
-              libero id faucibus nisl. Nibh sit amet commodo nulla facilisi.
-              Tempus iaculis urna id volutpat. Sociis natoque penatibus et
-              magnis. Gravida dictum fusce ut placerat orci nulla pellentesque
-              dignissim. In fermentum posuere urna nec.
-            </p>
+      </div>
+
+      <div className="right collapse w-[10em] min-w-[195px]">
+        <div className="drawer">
+          <input
+            id="my-drawer"
+            checked="checked"
+            type="checkbox"
+            className="drawer-toggle hidden"
+          />
+          <div className="drawer-side">
+            <label for="my-drawer" className="drawer-overlay"></label>
+            <ul className="menu p-4 h-screen bg-edsightlightgray-100 text-base-content gap-6 pt-10">
+              <svg
+                width="179"
+                height="25"
+                viewBox="0 0 179 31"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M0 15.137V24.7083C0 25.5367 0.671573 26.2083 1.5 26.2083H20.4571C21.2855 26.2083 21.9571 25.5367 21.9571 24.7083V6.03585C21.9571 4.87677 20.6986 4.15564 19.6986 4.74176L14.5319 7.77012C14.3019 7.90495 14.0401 7.97603 13.7734 7.97603H6.61316C6.18886 7.97603 5.78441 8.15573 5.50001 8.4706L0.386846 14.1316C0.137846 14.4073 0 14.7655 0 15.137Z"
+                  fill="#E7798C"
+                />
+                <path
+                  d="M0 19.2723V24.7104C0 25.5389 0.671573 26.2104 1.5 26.2104H20.4571C21.2855 26.2104 21.9571 25.5389 21.9571 24.7104V12.3425C21.9571 11.2314 20.7911 10.5059 19.7943 10.9969L14.4118 13.6481C14.2588 13.7234 14.0941 13.7722 13.9248 13.7921L6.71389 14.6431C6.50959 14.6672 6.31242 14.7331 6.13466 14.8366L0.744979 17.9762C0.283709 18.2449 0 18.7385 0 19.2723Z"
+                  fill="#9BAEC7"
+                />
+                <path
+                  d="M0 23.1281V24.7084C0 25.5368 0.671573 26.2084 1.5 26.2084H20.4571C21.2855 26.2084 21.9571 25.5368 21.9571 24.7084V19.5024C21.9571 18.5096 21.0101 17.7907 20.0539 18.0576L14.3463 19.6506C14.2362 19.6814 14.123 19.6994 14.0088 19.7044L6.1571 20.0494C6.01753 20.0555 5.8795 20.0811 5.74701 20.1254L1.02407 21.7056C0.412368 21.9103 0 22.4831 0 23.1281Z"
+                  fill="#FFBA5B"
+                />
+                <path
+                  d="M38.8564 25.0095C37.5528 25.0095 36.3375 24.826 35.2107 24.4591C34.1059 24.0692 33.1337 23.4959 32.294 22.7391C31.4765 21.9822 30.8247 21.0305 30.3386 19.8838C29.8746 18.7371 29.6426 17.3954 29.6426 15.8589C29.6426 14.3452 29.8746 13.0494 30.3386 11.9715C30.8247 10.8707 31.4544 9.97629 32.2278 9.28827C33.0011 8.57731 33.8849 8.0613 34.8792 7.74022C35.8735 7.39621 36.8899 7.22421 37.9284 7.22421C39.0995 7.22421 40.1601 7.40768 41.1102 7.77462C42.0824 8.14157 42.9109 8.64611 43.5959 9.28827C44.303 9.93042 44.8443 10.6987 45.2199 11.5931C45.6177 12.4876 45.8165 13.4623 45.8165 14.5172C45.8165 15.297 45.6066 15.8933 45.1868 16.3061C44.767 16.7189 44.1814 16.9826 43.4302 17.0973L35.2438 18.3701C35.4868 19.1269 35.984 19.7003 36.7352 20.0902C37.4865 20.4571 38.3482 20.6406 39.3204 20.6406C40.2263 20.6406 41.077 20.5259 41.8725 20.2966C42.69 20.0443 43.3529 19.7576 43.8611 19.4366C44.2146 19.6659 44.5129 19.987 44.7559 20.3998C44.999 20.8126 45.1205 21.2483 45.1205 21.707C45.1205 22.7391 44.6565 23.5073 43.7285 24.0119C43.0214 24.4018 42.226 24.6655 41.3422 24.8031C40.4583 24.9407 39.6298 25.0095 38.8564 25.0095ZM37.9284 11.4899C37.3981 11.4899 36.9341 11.5817 36.5364 11.7651C36.1608 11.9486 35.8514 12.1894 35.6084 12.4876C35.3653 12.7628 35.1775 13.0838 35.0449 13.4508C34.9345 13.7948 34.8682 14.1503 34.8461 14.5172L40.5136 13.554C40.4473 13.0953 40.2042 12.6366 39.7844 12.1779C39.3646 11.7193 38.7459 11.4899 37.9284 11.4899Z"
+                  fill="#1F2B3A"
+                />
+                <path
+                  d="M47.8326 16.0997C47.8326 14.586 48.0535 13.2788 48.4954 12.1779C48.9373 11.0542 49.545 10.1254 50.3183 9.39147C51.1137 8.65758 52.0307 8.11863 53.0692 7.77462C54.1298 7.40768 55.2677 7.22421 56.483 7.22421C56.9249 7.22421 57.3557 7.27007 57.7755 7.36181C58.1954 7.43061 58.5378 7.52235 58.803 7.63702V2.06406C59.0239 1.99526 59.3775 1.92645 59.8636 1.85765C60.3497 1.76592 60.8468 1.72005 61.355 1.72005C61.8411 1.72005 62.272 1.75445 62.6476 1.82325C63.0453 1.89205 63.3768 2.02966 63.6419 2.23606C63.9071 2.44247 64.1059 2.72914 64.2385 3.09609C64.3711 3.4401 64.4373 3.89878 64.4373 4.47213V20.7782C64.4373 21.8561 63.9512 22.7161 62.979 23.3583C62.3383 23.794 61.5097 24.1724 60.4933 24.4935C59.4769 24.8375 58.3058 25.0095 56.9801 25.0095C55.5439 25.0095 54.2513 24.8031 53.1023 24.3903C51.9755 23.9775 51.0143 23.3812 50.2189 22.6014C49.4455 21.8217 48.8489 20.8929 48.4291 19.815C48.0314 18.7141 47.8326 17.4757 47.8326 16.0997ZM57.2453 11.7995C56.0521 11.7995 55.1351 12.155 54.4944 12.866C53.8536 13.5769 53.5332 14.6548 53.5332 16.0997C53.5332 17.5216 53.8315 18.5995 54.4281 19.3334C55.0246 20.0443 55.8864 20.3998 57.0132 20.3998C57.411 20.3998 57.7645 20.3425 58.0738 20.2278C58.4053 20.0902 58.6594 19.9411 58.8361 19.7806V12.2123C58.3942 11.9371 57.8639 11.7995 57.2453 11.7995Z"
+                  fill="#1F2B3A"
+                />
+                <path
+                  d="M81.5372 19.471C81.5372 21.2139 80.9075 22.5785 79.6481 23.5647C78.3886 24.5508 76.5326 25.0439 74.08 25.0439C73.152 25.0439 72.2902 24.9751 71.4948 24.8375C70.6994 24.6999 70.0144 24.4935 69.4399 24.2183C68.8875 23.9202 68.4456 23.5532 68.1142 23.1175C67.8048 22.6817 67.6502 22.1657 67.6502 21.5694C67.6502 21.019 67.7607 20.5603 67.9816 20.1934C68.2026 19.8035 68.4677 19.4824 68.777 19.2302C69.4178 19.5971 70.147 19.9296 70.9645 20.2278C71.8041 20.503 72.7653 20.6406 73.848 20.6406C74.5329 20.6406 75.0522 20.5374 75.4057 20.331C75.7813 20.1246 75.9691 19.8494 75.9691 19.5054C75.9691 19.1843 75.8366 18.932 75.5714 18.7485C75.3063 18.5651 74.8644 18.416 74.2457 18.3013L73.2514 18.0949C71.3291 17.705 69.8929 17.0973 68.9428 16.2717C68.0147 15.4231 67.5507 14.2191 67.5507 12.6596C67.5507 11.811 67.7275 11.0427 68.081 10.3547C68.4346 9.66668 68.9317 9.09333 69.5725 8.63465C70.2133 8.17597 70.9756 7.82049 71.8594 7.56822C72.7653 7.31594 73.7596 7.18981 74.8423 7.18981C75.6598 7.18981 76.4221 7.25861 77.1292 7.39621C77.8583 7.51088 78.488 7.69435 79.0183 7.94663C79.5486 8.1989 79.9684 8.53144 80.2778 8.94426C80.5871 9.33413 80.7418 9.80428 80.7418 10.3547C80.7418 10.8822 80.6423 11.3409 80.4435 11.7307C80.2667 12.0977 80.0347 12.4073 79.7475 12.6596C79.5707 12.5449 79.3056 12.4302 78.952 12.3156C78.5985 12.1779 78.2118 12.0633 77.792 11.9715C77.3722 11.8569 76.9413 11.7651 76.4994 11.6963C76.0796 11.6275 75.6929 11.5931 75.3394 11.5931C74.6103 11.5931 74.0468 11.6849 73.6491 11.8683C73.2514 12.0289 73.0525 12.2926 73.0525 12.6596C73.0525 12.9118 73.163 13.1182 73.384 13.2788C73.6049 13.4393 74.0247 13.5884 74.6434 13.726L75.6709 13.9668C77.792 14.4713 79.2945 15.1708 80.1783 16.0653C81.0843 16.9368 81.5372 18.072 81.5372 19.471Z"
+                  fill="#1F2B3A"
+                />
+                <path
+                  d="M84.1286 3.09609C84.1286 2.2246 84.4048 1.49071 84.9572 0.894424C85.5317 0.298142 86.2829 0 87.2109 0C88.139 0 88.8792 0.298142 89.4315 0.894424C90.006 1.49071 90.2933 2.2246 90.2933 3.09609C90.2933 3.96758 90.006 4.70147 89.4315 5.29775C88.8792 5.89404 88.139 6.19218 87.2109 6.19218C86.2829 6.19218 85.5317 5.89404 84.9572 5.29775C84.4048 4.70147 84.1286 3.96758 84.1286 3.09609ZM90.0281 24.4247C89.7851 24.4706 89.4205 24.5279 88.9344 24.5967C88.4704 24.6884 87.9953 24.7343 87.5092 24.7343C87.0231 24.7343 86.5812 24.6999 86.1835 24.6311C85.8079 24.5623 85.4875 24.4247 85.2223 24.2183C84.9572 24.0119 84.7473 23.7367 84.5926 23.3927C84.46 23.0257 84.3938 22.5556 84.3938 21.9822V7.98103C84.6368 7.93516 84.9903 7.87783 85.4543 7.80902C85.9404 7.71729 86.4265 7.67142 86.9126 7.67142C87.3988 7.67142 87.8296 7.70582 88.2052 7.77462C88.603 7.84342 88.9344 7.98103 89.1995 8.18743C89.4647 8.39384 89.6635 8.68052 89.7961 9.04746C89.9508 9.39147 90.0281 9.85015 90.0281 10.4235V24.4247Z"
+                  fill="#1F2B3A"
+                />
+                <path
+                  d="M101.47 7.22421C102.73 7.22421 103.867 7.39621 104.884 7.74022C105.922 8.0613 106.795 8.48558 107.502 9.01306C107.944 9.33413 108.287 9.68961 108.53 10.0795C108.795 10.4694 108.927 10.9739 108.927 11.5931V23.6335C108.927 24.849 108.706 25.8925 108.264 26.764C107.823 27.6584 107.215 28.3923 106.442 28.9656C105.69 29.5619 104.795 29.9977 103.757 30.2729C102.741 30.5481 101.647 30.6857 100.476 30.6857C98.4651 30.6857 96.8852 30.399 95.7363 29.8257C94.5873 29.2752 94.0128 28.3693 94.0128 27.108C94.0128 26.5805 94.1123 26.1103 94.3111 25.6975C94.5321 25.3077 94.7751 25.0095 95.0403 24.8031C95.681 25.1701 96.3991 25.4797 97.1946 25.7319C98.0121 25.9842 98.8517 26.1103 99.7135 26.1103C100.907 26.1103 101.857 25.9039 102.564 25.4911C103.271 25.0783 103.624 24.4132 103.624 23.4959V22.9455C102.718 23.3583 101.614 23.5647 100.31 23.5647C99.3158 23.5647 98.3656 23.4156 97.4597 23.1175C96.5759 22.7964 95.7915 22.3148 95.1066 21.6726C94.4437 21.0075 93.9023 20.159 93.4825 19.1269C93.0848 18.0949 92.8859 16.868 92.8859 15.446C92.8859 14.0471 93.0959 12.8316 93.5157 11.7995C93.9576 10.7675 94.5542 9.91895 95.3054 9.25387C96.0788 8.56585 96.9847 8.0613 98.0232 7.74022C99.0837 7.39621 100.233 7.22421 101.47 7.22421ZM103.525 12.2123C103.37 12.1206 103.138 12.0289 102.829 11.9371C102.542 11.8454 102.177 11.7995 101.735 11.7995C100.653 11.7995 99.835 12.1206 99.2826 12.7628C98.7523 13.382 98.4872 14.2764 98.4872 15.446C98.4872 16.7762 98.7523 17.7394 99.2826 18.3357C99.835 18.9091 100.531 19.1958 101.371 19.1958C102.277 19.1958 102.995 18.9779 103.525 18.5421V12.2123Z"
+                  fill="#1F2B3A"
+                />
+                <path
+                  d="M128.329 24.4247C128.108 24.4935 127.754 24.5623 127.268 24.6311C126.804 24.6999 126.318 24.7343 125.81 24.7343C125.324 24.7343 124.882 24.6999 124.484 24.6311C124.109 24.5623 123.788 24.4247 123.523 24.2183C123.258 24.0119 123.048 23.7367 122.893 23.3927C122.761 23.0257 122.694 22.5556 122.694 21.9822V14.3452C122.694 13.4049 122.462 12.7513 121.998 12.3844C121.557 11.9945 121.004 11.7995 120.341 11.7995C119.899 11.7995 119.48 11.8569 119.082 11.9715C118.684 12.0862 118.364 12.2238 118.121 12.3844V24.4247C117.9 24.4935 117.546 24.5623 117.06 24.6311C116.596 24.6999 116.11 24.7343 115.602 24.7343C115.116 24.7343 114.674 24.6999 114.276 24.6311C113.9 24.5623 113.58 24.4247 113.315 24.2183C113.05 24.0119 112.84 23.7367 112.685 23.3927C112.553 23.0257 112.486 22.5556 112.486 21.9822V2.02966C112.729 1.98379 113.083 1.92645 113.547 1.85765C114.033 1.76592 114.519 1.72005 115.005 1.72005C115.491 1.72005 115.922 1.75445 116.298 1.82325C116.696 1.89205 117.027 2.02966 117.292 2.23606C117.557 2.44247 117.756 2.72914 117.889 3.09609C118.043 3.4401 118.121 3.89878 118.121 4.47213V7.84342C118.408 7.72875 118.839 7.60262 119.413 7.46501C120.01 7.30448 120.662 7.22421 121.369 7.22421C123.556 7.22421 125.258 7.79756 126.473 8.94426C127.71 10.068 128.329 11.7537 128.329 14.0012V24.4247Z"
+                  fill="#1F2B3A"
+                />
+                <path
+                  d="M137.442 18.7141C137.442 19.3104 137.619 19.7347 137.972 19.987C138.348 20.2392 138.867 20.3654 139.53 20.3654C139.861 20.3654 140.204 20.3424 140.557 20.2966C140.911 20.2278 141.22 20.1475 141.485 20.0558C141.684 20.3081 141.85 20.5947 141.983 20.9158C142.137 21.2139 142.215 21.5809 142.215 22.0166C142.215 22.8881 141.894 23.5991 141.253 24.1495C140.635 24.6999 139.53 24.9751 137.939 24.9751C135.995 24.9751 134.492 24.5164 133.432 23.5991C132.393 22.6817 131.874 21.191 131.874 19.1269V4.40333C132.117 4.33452 132.459 4.26572 132.901 4.19692C133.365 4.10518 133.851 4.05932 134.36 4.05932C135.332 4.05932 136.083 4.24279 136.613 4.60973C137.166 4.95374 137.442 5.6991 137.442 6.8458V9.04746H141.784C141.916 9.29973 142.038 9.62081 142.148 10.0107C142.281 10.3776 142.347 10.7904 142.347 11.2491C142.347 12.0518 142.17 12.6366 141.817 13.0036C141.485 13.3476 141.032 13.5196 140.458 13.5196H137.442V18.7141Z"
+                  fill="#1F2B3A"
+                />
+                <path
+                  d="M144.084 21.6726C144.084 20.7094 144.371 19.9067 144.945 19.2646C145.52 18.6224 146.304 18.3013 147.298 18.3013C148.293 18.3013 149.077 18.6224 149.652 19.2646C150.226 19.9067 150.513 20.7094 150.513 21.6726C150.513 22.6359 150.226 23.4385 149.652 24.0807C149.077 24.7228 148.293 25.0439 147.298 25.0439C146.304 25.0439 145.52 24.7228 144.945 24.0807C144.371 23.4385 144.084 22.6359 144.084 21.6726Z"
+                  fill="#1F2B3A"
+                />
+                <path
+                  d="M152.843 3.09609C152.843 2.2246 153.119 1.49071 153.671 0.894424C154.246 0.298142 154.997 0 155.925 0C156.853 0 157.593 0.298142 158.146 0.894424C158.72 1.49071 159.007 2.2246 159.007 3.09609C159.007 3.96758 158.72 4.70147 158.146 5.29775C157.593 5.89404 156.853 6.19218 155.925 6.19218C154.997 6.19218 154.246 5.89404 153.671 5.29775C153.119 4.70147 152.843 3.96758 152.843 3.09609ZM158.742 24.4247C158.499 24.4706 158.135 24.5279 157.648 24.5967C157.184 24.6884 156.709 24.7343 156.223 24.7343C155.737 24.7343 155.295 24.6999 154.898 24.6311C154.522 24.5623 154.202 24.4247 153.936 24.2183C153.671 24.0119 153.461 23.7367 153.307 23.3927C153.174 23.0257 153.108 22.5556 153.108 21.9822V7.98103C153.351 7.93516 153.704 7.87783 154.168 7.80902C154.655 7.71729 155.141 7.67142 155.627 7.67142C156.113 7.67142 156.544 7.70582 156.919 7.77462C157.317 7.84342 157.648 7.98103 157.914 8.18743C158.179 8.39384 158.378 8.68052 158.51 9.04746C158.665 9.39147 158.742 9.85015 158.742 10.4235V24.4247Z"
+                  fill="#1F2B3A"
+                />
+                <path
+                  d="M179 16.0997C179 17.5216 178.79 18.7944 178.371 19.9182C177.951 21.019 177.354 21.9478 176.581 22.7046C175.83 23.4615 174.924 24.0348 173.863 24.4247C172.802 24.8146 171.62 25.0095 170.317 25.0095C169.013 25.0095 167.831 24.8031 166.77 24.3903C165.71 23.9775 164.793 23.3927 164.02 22.6358C163.268 21.8561 162.683 20.9158 162.263 19.815C161.843 18.7141 161.633 17.4757 161.633 16.0997C161.633 14.7466 161.843 13.5196 162.263 12.4188C162.683 11.3179 163.268 10.3891 164.02 9.63228C164.793 8.85252 165.71 8.25624 166.77 7.84342C167.831 7.43061 169.013 7.22421 170.317 7.22421C171.62 7.22421 172.802 7.44208 173.863 7.87783C174.924 8.29064 175.83 8.88692 176.581 9.66668C177.354 10.4235 177.951 11.3523 178.371 12.4532C178.79 13.554 179 14.7695 179 16.0997ZM167.4 16.0997C167.4 17.4986 167.654 18.5765 168.162 19.3334C168.693 20.0672 169.422 20.4342 170.35 20.4342C171.278 20.4342 171.985 20.0558 172.471 19.299C172.979 18.5421 173.233 17.4757 173.233 16.0997C173.233 14.7236 172.979 13.6687 172.471 12.9348C171.963 12.1779 171.245 11.7995 170.317 11.7995C169.389 11.7995 168.671 12.1779 168.162 12.9348C167.654 13.6687 167.4 14.7236 167.4 16.0997Z"
+                  fill="#1F2B3A"
+                />
+              </svg>
+              <li>
+                <a className="hover:text-edsightteal-100">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="icon icon-tabler icon-tabler-timeline"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    stroke-width="2"
+                    stroke="currentColor"
+                    fill="none"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M4 16l6 -7l5 5l5 -6"></path>
+                    <path d="M15 14m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                    <path d="M10 9m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                    <path d="M4 16m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                    <path d="M20 8m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                  </svg>
+                  Dashboard
+                </a>
+              </li>
+              <li>
+                <a className="hover:text-edsightteal-100">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="icon icon-tabler icon-tabler-file-star"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    stroke-width="2"
+                    stroke="currentColor"
+                    fill="none"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M14 3v4a1 1 0 0 0 1 1h4"></path>
+                    <path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z"></path>
+                    <path d="M11.8 16.817l-2.172 1.138a.392 .392 0 0 1 -.568 -.41l.415 -2.411l-1.757 -1.707a.389 .389 0 0 1 .217 -.665l2.428 -.352l1.086 -2.193a.392 .392 0 0 1 .702 0l1.086 2.193l2.428 .352a.39 .39 0 0 1 .217 .665l-1.757 1.707l.414 2.41a.39 .39 0 0 1 -.567 .411l-2.172 -1.138z"></path>
+                  </svg>
+                  Reports
+                </a>
+              </li>
+              <li className="bg-edsightteal-100 rounded-l-md text-white">
+                <a className="hover:bg-edsightteal-100 hover:text-white">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="icon icon-tabler icon-tabler-file-analytics"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    stroke-width="2"
+                    stroke="currentColor"
+                    fill="none"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M14 3v4a1 1 0 0 0 1 1h4"></path>
+                    <path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z"></path>
+                    <path d="M9 17l0 -5"></path>
+                    <path d="M12 17l0 -1"></path>
+                    <path d="M15 17l0 -3"></path>
+                  </svg>
+                  Activity
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <label for="my-drawer" className="drawer-button">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="icon icon-tabler icon-tabler-chevrons-right"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            stroke-width="2"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M7 7l5 5l-5 5"></path>
+            <path d="M13 7l5 5l-5 5"></path>
+          </svg>
+        </label>
+      </div>
+
+      <div className="flex flex-col w-[100%] h-[100%] p-8">
+        <div className="flex w-[100%] justify-between">
+          <div className="flex justify-start items-start">
+            <button>Personal Home</button>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="icon icon-tabler icon-tabler-chevron-right"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              stroke-width="2"
+              stroke="grey"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+              <path d="M9 6l6 6l-6 6"></path>
+            </svg>
+            <button>Activity List</button>
+          </div>
+          <div>
+            <button className="flex items-center">
+              <div className="avatar online placeholder">
+                <div className="bg-neutral-focus text-neutral-content rounded-full w-16">
+                  <span className="text-xl">JO</span>
+                </div>
+              </div>
+              <div className="block text-left pl-2">
+                <p>Jo Mummah</p>
+                <p>jomama88@gmail.com</p>
+              </div>
+            </button>
+          </div>
+        </div>
+        <div>
+          <h1 className="text-2xl font-bold">Jo&apos;s Workspace</h1>
+          <p>See all of your previously scheduled surevys below.</p>
+
+          <div className="flex mt-16">
+            <label>Activity List</label>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="icon icon-tabler icon-tabler-reload"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              stroke-width="2"
+              stroke="currentColor"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+              <path d="M19.933 13.041a8 8 0 1 1 -9.925 -8.788c3.899 -1 7.935 1.007 9.425 4.747"></path>
+              <path d="M20 4v5h-5"></path>
+            </svg>
           </div>
         </div>
       </div>
