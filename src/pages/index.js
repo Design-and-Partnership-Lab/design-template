@@ -2,11 +2,14 @@ import Head from "next/head";
 import Image from "next/image";
 import { Inter } from "next/font/google";
 import Sidebar from "../components/Sidebar";
+import classNames from "classnames";
+import { useState } from "react";
 
 const inter = Inter({ subsets: ["latin"] });
 
 //This is the component for the entire page.
 export default function Home({ isLoading, children, setLoading }) {
+  const [isCollapsed, setIsCollapsed] = useState(false);
   return (
     <div className="flex w-[100vw] h-[100vh]" bg-edsightnavy>
       <div className="flex justify-center w-[50px] h-[100vh] bg-edsightnavy-300">
@@ -106,7 +109,7 @@ export default function Home({ isLoading, children, setLoading }) {
           </button>
         </div>
       </div>
-
+      {/* 
       <div className="right collapse w-[10em] min-w-[195px]">
         <div className="drawer">
           <input
@@ -116,7 +119,7 @@ export default function Home({ isLoading, children, setLoading }) {
             className="drawer-toggle hidden"
           />
           <div className="drawer-side">
-            <label for="my-drawer" className="drawer-overlay"></label>
+            <label htmlFor="my-drawer" className="drawer-overlay"></label>
             <ul className="menu p-4 h-screen bg-edsightlightgray-100 text-base-content gap-6 pt-10">
               <svg
                 width="179"
@@ -251,10 +254,35 @@ export default function Home({ isLoading, children, setLoading }) {
             </ul>
           </div>
         </div>
+      </div> */}
+      <div
+        className={classNames(
+          { "w-[10em] min-w-[195px]": isCollapsed },
+          { "w-0": !isCollapsed },
+          "right"
+        )}
+      >
+        <div className="drawer">
+          <input id="my-drawer" type="checkbox" className="drawer-toggle" />
+          <div className="drawer-side">
+            <ul className="menu p-4 w-80 bg-base-100 text-base-content">
+              <li>
+                <a>Sidebar Item 1</a>
+              </li>
+              <li>
+                <a>Sidebar Item 2</a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
 
       <div>
-        <label for="my-drawer" className="drawer-button">
+        <label
+          htmlFor="my-drawer"
+          className="drawer-button"
+          onClick={() => setIsCollapsed(!isCollapsed)}
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="icon icon-tabler icon-tabler-chevrons-right"
