@@ -11,6 +11,8 @@ const inter = Inter({ subsets: ["latin"] });
 export default function Home({ isLoading, children, setLoading }) {
   const [isCollapsed, setIsCollapsed] = useState(false);
   const [collabWorkspaces, setCollabWorkspaces] = useState([{name:"workspace1"}, {name:"workspace2"}, {name:"workspace3"}]);
+  const [drawerNavBar] = useState([{name:"drawerOption1"}, {name:"drawerOption1"}, {name:"drawerOption1"}])
+
   return (
     <div className="flex w-[100vw] h-[100vh] bg-gray">
       <div className="flex justify-center w-[50px] h-[100vh] bg-edsightnavy-300">
@@ -169,6 +171,30 @@ export default function Home({ isLoading, children, setLoading }) {
           <input id="my-drawer" type="checkbox" className="drawer-toggle" />
           <div className="drawer-side">
             <ul className="menu p-4 bg-base-100 text-base-content">
+                {drawerNavBar.map((item, index) => {
+                  return (
+                    
+                  <button key={index} className="pb-6">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="icon icon-tabler icon-tabler-users stroke-edsightlightgray-100 hover:stroke-edsightyellow-400"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      stroke-width="2"
+                      fill="none"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                      <path d="M9 7m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0"></path>
+                      <path d="M3 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2"></path>
+                      <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                      <path d="M21 21v-2a4 4 0 0 0 -3 -3.85"></path>
+                    </svg>
+                  </button>
+                  );
+                })}
               <li>
                 <a>Sidebar Item 1</a>
               </li>
