@@ -97,7 +97,7 @@ export default function Home({ isLoading, children, setLoading }) {
         <div className="drawer">
           <input id="my-drawer" type="checkbox" className="drawer-toggle" />
           <div className="drawer-side ">
-            <ul className="menu p-8 bg-edsightlightgray-100 justify-between">
+            <ul className="menu p-6 pr-12 bg-edsightlightgray-100 justify-between">
               <div>
                 <Image className="pb-5" src={edsightIcon} alt="Edsight Logo."></Image>
                 <div className="w-[100%] pb-4">
@@ -146,7 +146,7 @@ export default function Home({ isLoading, children, setLoading }) {
         </div>
       </div>
 
-      <div className="flex justify-center content-center bg-edsightlightgray-100 h-[35px] w-[35px] ">
+      <div className="flex justify-center content-center rounded-r-md bg-edsightlightgray-100 h-[35px] w-[35px] ">
         <label
           htmlFor="my-drawer"
           className="drawer-button flex justify-center content-center"
