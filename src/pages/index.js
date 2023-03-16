@@ -93,7 +93,6 @@ export default function Home({ isLoading, children, setLoading }) {
       </div>
 
       <div className={classNames({"w-[16em] min-w-[195px]" : isCollapsed }, {"w-5": !isCollapsed }, "right")}>
-        <Link href='/Login'>onboarding</Link>
         <div className="drawer">
           <input id="my-drawer" type="checkbox" className="drawer-toggle" />
           <div className="drawer-side ">
@@ -224,6 +223,9 @@ export default function Home({ isLoading, children, setLoading }) {
               <path d="M20 4v5h-5"></path>
           </svg>
          </div>
+         <button class="btn">
+         <Link href='/Login'>onboarding</Link>
+         </button>
         </div>
       </div>
 
