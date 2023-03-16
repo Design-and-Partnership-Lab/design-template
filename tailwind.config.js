@@ -111,4 +111,7 @@ module.exports = {
       },
     ],
   },
+  variants: {
+    fill: ['hover', 'focus'], // this line does the trick
+  },
 };
