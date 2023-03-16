@@ -4,12 +4,11 @@ import { Inter } from "next/font/google";
 import Sidebar from "../components/Sidebar";
 import classNames from "classnames";
 import { useState } from "react";
-
 import edsightIcon from "public/edsightIcon.svg";
 import dashboardIcon from "public/NavIcons/dashboardIcon.svg";
 import reportsIcon from "public/NavIcons/reportsIcon.svg";
 import activityIcon from "public/NavIcons/activityIcon.svg";
-
+import Link from 'next/link'
 const inter = Inter({ subsets: ["latin"] });
 
 const drawerNavData = [
@@ -94,6 +93,7 @@ export default function Home({ isLoading, children, setLoading }) {
       </div>
 
       <div className={classNames({"w-[16em] min-w-[195px]" : isCollapsed }, {"w-5": !isCollapsed }, "right")}>
+        <Link href='/Login'>onboarding</Link>
         <div className="drawer">
           <input id="my-drawer" type="checkbox" className="drawer-toggle" />
           <div className="drawer-side ">
