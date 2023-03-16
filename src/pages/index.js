@@ -30,7 +30,7 @@ export default function Home({ isLoading, children, setLoading }) {
       <div className="flex justify-center w-[50px] h-[100vh] bg-edsightnavy-300 p-8" >
         <div className="flex flex-col h-[25em] justify-between px-4">
           <ul>
-        <button className="pb-6">
+        <button className="pb-8">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="icon icon-tabler icon-tabler-home-2 stroke-edsightyellow-400"
@@ -50,7 +50,7 @@ export default function Home({ isLoading, children, setLoading }) {
         </button>
         {collabWorkspaces.map((item, index) => {
           return (
-          <button key={index} className="pb-6 hover:stroke-edsightyellow-400">
+          <button key={index} className="pb-8 hover:stroke-edsightyellow-400">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="icon icon-tabler icon-tabler-users stroke-edsightlightgray-100 hover:stroke-edsightyellow-400"
@@ -71,7 +71,7 @@ export default function Home({ isLoading, children, setLoading }) {
           </button>
           );
         })}
-        <button className="pb-6">
+        <button className="pb-8">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="icon icon-tabler icon-tabler-circle-plus stroke-edsightlightgray-100 hover:stroke-edsightyellow-400"
@@ -114,7 +114,7 @@ export default function Home({ isLoading, children, setLoading }) {
                 {drawerNavBar.map((item, index) => {
                   return (
                     <li key={index} className="pb-4"> 
-                      <a className={classNames({"w-[300px] bg-edsightyellow-400" : (item.name == "Dashboard")}, { "w-[300px]": (item.name != "Dashboard")})}>
+                      <a className={classNames({"w-[300px] bg-edsightteal-100 text-white fill-white stroke-white" : (item.name == "Dashboard")}, { "w-[300px]": (item.name != "Dashboard")})}>
                         <Image src={item.icon} alt="Drawer NavBar icons."></Image>
                         {item.name}
                       </a>
