@@ -115,7 +115,8 @@ export default function Home({ isLoading, children, setLoading }) {
                   return (
                     <li key={index} className="pb-4"> 
                       <a className={classNames({"w-[300px] bg-edsightteal-100 text-white fill-white stroke-white" : (item.name == "Dashboard")}, { "w-[300px]": (item.name != "Dashboard")})}>
-                        <Image src={item.icon} alt="Drawer NavBar icons."></Image>
+                        {/* <Image src={item.icon} alt="Drawer NavBar icons." style={{fill: "#ffffff"}}></Image> */}
+                        <NavbarIcon type={item.name}></NavbarIcon>
                         {item.name}
                       </a>
                     </li>
@@ -230,4 +231,50 @@ export default function Home({ isLoading, children, setLoading }) {
 
     
   );
+}
+
+
+const NavbarIcon=({type}) => {
+
+  if (type == "Dashboard") {
+    return (
+      <div>
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-timeline" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="white" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+          <path d="M4 16l6 -7l5 5l5 -6"></path>
+          <path d="M15 14m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+          <path d="M10 9m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+          <path d="M4 16m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+          <path d="M20 8m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+        </svg>
+      </div>
+    )
+  }
+  else if (type=="Reports"){
+    return (
+      <div>
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-file-star" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                  <path d="M14 3v4a1 1 0 0 0 1 1h4"></path>
+                  <path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z"></path>
+                  <path d="M11.8 16.817l-2.172 1.138a.392 .392 0 0 1 -.568 -.41l.415 -2.411l-1.757 -1.707a.389 .389 0 0 1 .217 -.665l2.428 -.352l1.086 -2.193a.392 .392 0 0 1 .702 0l1.086 2.193l2.428 .352a.39 .39 0 0 1 .217 .665l-1.757 1.707l.414 2.41a.39 .39 0 0 1 -.567 .411l-2.172 -1.138z"></path>
+               </svg>
+      </div>
+    )
+  }
+  else if (type=="Activity"){
+    return (
+      <div>
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-file-analytics" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M14 3v4a1 1 0 0 0 1 1h4"></path>
+                <path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z"></path>
+                <path d="M9 17l0 -5"></path>
+                <path d="M12 17l0 -1"></path>
+                <path d="M15 17l0 -3"></path>
+        </svg>
+      </div>
+    )
+  }
+  
 }
