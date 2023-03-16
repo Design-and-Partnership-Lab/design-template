@@ -4,7 +4,7 @@ import { Inter } from "next/font/google";
 import Sidebar from "../components/Sidebar";
 import classNames from "classnames";
 import { useState } from "react";
-
+import Link from 'next/link'
 const inter = Inter({ subsets: ["latin"] });
 
 //This is the component for the entire page.
@@ -20,6 +20,7 @@ export default function Home({ isLoading, children, setLoading }) {
           "right"
         )}
       >
+        <Link href='/Login'>onboarding</Link>
         <div className="drawer">
           <input id="my-drawer" type="checkbox" className="drawer-toggle" />
           <div className="drawer-side">
